@@ -37,7 +37,11 @@ public class Book {
     }
 
     public void returnBook() {
-        isAvailable = true;
-        System.out.println(title + " returned.");
+        if (isAvailable) {
+            System.out.println("Borrow the book");
+        } else {
+            System.out.println(title + ": Returned");
+            isAvailable = true;
+        }
     }
 }
